@@ -3,59 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notifikasi - Peminjaman Ruang Kampus</title>
+  <title>Validasi Jadwal - Peminjaman Ruang Kampus</title>
 </head>
 <body>
-  <h1>Notifikasi</h1>
-  <p>Informasi terbaru tentang pengajuan peminjaman ruang.</p>
+  <h1>Validasi Jadwal Peminjaman</h1>
+  <p>Periksa ketersediaan ruang sebelum mengajukan peminjaman.</p>
 
   <h2>Menu</h2>
   <ul>
     <li><a href="index.html">Beranda</a></li>
-    <li>Notifikasi</li>
+    <li>Validasi Jadwal</li>
   </ul>
 
-  <h2>Pengaturan Notifikasi</h2>
+  <h2>Form Pemeriksaan Jadwal</h2>
   <form>
-    <input type="checkbox" id="email" checked>
-    <label for="email">Kirim notifikasi ke email</label>
+    <label>Nama Ruang</label>
+    <select required>
+      <option value="">-- Pilih ruang --</option>
+      <option>Ruang 101</option>
+      <option>Ruang 202</option>
+      <option>Laboratorium 1</option>
+    </select>
 
     <br><br>
 
-    <input type="checkbox" id="status" checked>
-    <label for="status">Beritahu perubahan status pengajuan</label>
+    <label>Tanggal</label>
+    <input type="date" required>
 
     <br><br>
 
-    <input type="checkbox" id="pengingat">
-    <label for="pengingat">Pengingat satu hari sebelum jadwal</label>
+    <label>Jam Mulai</label>
+    <input type="time" min="07:00" max="21:00" required>
 
     <br><br>
 
-    <button type="button">Simpan Pengaturan</button>
+    <label>Jam Selesai</label>
+    <input type="time" min="07:00" max="21:00" required>
+
+    <br><br>
+
+    <button type="submit">Periksa Jadwal</button>
   </form>
 
-  <h2>Daftar Notifikasi (Contoh)</h2>
+  <h2>Ketentuan Jadwal</h2>
+  <ul>
+    <li>Ruang dapat dipinjam pukul 07.00 sampai 21.00.</li>
+    <li>Jam selesai harus setelah jam mulai.</li>
+    <li>Satu ruang tidak boleh dipinjam dua pihak pada waktu yang sama.</li>
+  </ul>
+
+  <h2>Jadwal Terisi (Contoh)</h2>
   <table border="1" cellpadding="6">
     <tr>
+      <th>Ruang</th>
       <th>Tanggal</th>
-      <th>Pesan</th>
+      <th>Jam</th>
       <th>Status</th>
     </tr>
     <tr>
-      <td>28/11/2026</td>
-      <td>Pengajuan Ruang 101 telah disetujui.</td>
-      <td>Belum dibaca</td>
+      <td>Ruang 101</td>
+      <td>01/12/2026</td>
+      <td>08:00 - 10:00</td>
+      <td>Terisi</td>
     </tr>
     <tr>
-      <td>27/11/2026</td>
-      <td>Pengajuan Laboratorium 1 menunggu persetujuan.</td>
-      <td>Sudah dibaca</td>
-    </tr>
-    <tr>
-      <td>26/11/2026</td>
-      <td>Jadwal Ruang 202 bentrok, silakan pilih waktu lain.</td>
-      <td>Sudah dibaca</td>
+      <td>Laboratorium 1</td>
+      <td>01/12/2026</td>
+      <td>13:00 - 15:00</td>
+      <td>Terisi</td>
     </tr>
   </table>
 </body>
