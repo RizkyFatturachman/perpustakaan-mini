@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifikasi - Peminjaman Ruang Kampus</title>
+</head>
+<body>
+  <h1>Notifikasi</h1>
+  <p>Informasi terbaru tentang pengajuan peminjaman ruang.</p>
+
+  <h2>Menu</h2>
+  <ul>
+    <li><a href="index.html">Beranda</a></li>
+    <li>Notifikasi</li>
+  </ul>
+
+  <h2>Pengaturan Notifikasi</h2>
+  <form>
+    <input type="checkbox" id="email" checked>
+    <label for="email">Kirim notifikasi ke email</label>
+
+    <br><br>
+
+    <input type="checkbox" id="status" checked>
+    <label for="status">Beritahu perubahan status pengajuan</label>
+
+    <br><br>
+
+    <input type="checkbox" id="pengingat">
+    <label for="pengingat">Pengingat satu hari sebelum jadwal</label>
+
+    <br><br>
+
+    <button type="button">Simpan Pengaturan</button>
+  </form>
+
+  <h2>Daftar Notifikasi (Contoh)</h2>
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Tanggal</th>
+      <th>Pesan</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>28/11/2026</td>
+      <td>Pengajuan Ruang 101 telah disetujui.</td>
+      <td>Belum dibaca</td>
+    </tr>
+    <tr>
+      <td>27/11/2026</td>
+      <td>Pengajuan Laboratorium 1 menunggu persetujuan.</td>
+      <td>Sudah dibaca</td>
+    </tr>
+    <tr>
+      <td>26/11/2026</td>
+      <td>Jadwal Ruang 202 bentrok, silakan pilih waktu lain.</td>
+      <td>Sudah dibaca</td>
+    </tr>
+  </table>
+</body>
+</html>
